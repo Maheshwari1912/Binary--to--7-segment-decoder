@@ -19,3 +19,13 @@ A typical 7-segment display has 7 LEDs labeled from a to g, arranged in the foll
     -- d --
 
 ![image](https://github.com/user-attachments/assets/a3bef7ed-69fa-4f38-b0f7-b4fff9598190)
+
+📌 Applications
+
+Digital clocks and counters
+
+Microwave ovens and calculators
+
+Speedometers and other displays
+
+Embedded system outputs
