@@ -1,0 +1,31 @@
+module tb_binary_to_7segment;
+
+    logic [3:0] bin_in;
+    logic [6:0] seg_out;
+
+    // Instantiate the module
+    binary_to_7segment uut (
+        .bin_in(bin_in),
+        .seg_out(seg_out)
+    );
+
+    initial begin
+        // Test all numbers from 0 to 9
+        $display("Testing Binary to 7-Segment Decoder");
+
+        for (int i = 0; i < 10; i++) begin
+            bin_in = i;
+            #10;
+            $display("Input: %b | Output: %b", bin_in, seg_out);
+        end
+        
+        // Test invalid inputs
+        bin_in = 4'b1010; #10;
+        $display("Input: %b | Output: %b (Invalid)", bin_in, seg_out);
+
+        bin_in = 4'b1111; #10;
+        $display("Input: %b | Output: %b (Invalid)", bin_in, seg_out);
+
+        $finish;
+    end
+endmodule
